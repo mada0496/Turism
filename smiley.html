@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8"/>
+<title>smile</title>
+</head>
+<body>
+<canvas width="200" height="200" id="cav1"></canvas>
+<p id="no_cav" style="display:none;">Folositi un browser compatibil-Canvas ca sa vedeti aceasta zona.</p>
+<script>
+function draw(){
+var canvas=document.getElementById('cav1');if(canvas.getContext){
+var ctx=canvas.getContext('2d');
+ ctx.shadowOffsetX = 8;
+    ctx.shadowOffsetY = 8;
+    ctx.shadowBlur = 4;
+    ctx.shadowColor = 'rgba(0, 500, 1, 0.5)';
+ctx.arc(75,75,50,0,Math.PI*2,true);
+ ctx.fillStyle ="#660066";
+    ctx.arc(75,75,50,0,Math.PI*2,true);
+    ctx.fill();
+ctx.fillStyle="#6600FF";
+ctx.moveTo(110,75);
+ctx.lineWidth="5";
+ctx.arc(75,75,35,0,Math.PI,false);
+ctx.moveTo(65,65);
+ctx.strokeStyle="pink";
+		ctx.stroke();
+ctx.fill();
+  ctx.arc(60,65,4,0,Math.PI*2,true);
+ctx.moveTo(95,65);
+ctx.arc(90,65,4,0,Math.PI*2,true);
+ctx.stroke();}
+
+else{
+document.getElementById('no_cav').style.display=block;
+}
+} 
+draw();
+</script>
+</body>
+</html>
