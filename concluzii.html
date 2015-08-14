@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<head>
+</head>
+<body bgcolor="#00FFFF">
+<a href="proiect.html"><img src="sag.gif" width="5%" height="5%"></a>
+<script>
+function Scrie(){
+alert('Sper ca v-a placut proiectul meu');
+var  Raspuns=prompt('introduceti raspunsul','');
+if(Raspuns=="da")
+alert('super');
+else 
+alert('mai avem de lucrat');}
+
+Scrie();
+</script>
+<canvas width="200" height="200" id="cav1"></canvas>
+<p id="no_cav" style="display:none;">Folositi un browser compatibil-Canvas ca sa vedeti aceasta zona.</p>
+<script>
+function draw(){
+var canvas=document.getElementById('cav1');if(canvas.getContext){
+var ctx=canvas.getContext('2d');
+ctx.arc(75,75,50,0,Math.PI*2,true);
+ ctx.fillStyle ="#00CCFF";
+    ctx.arc(75,75,50,0,Math.PI*2,true);
+    ctx.fill();
+ctx.fillStyle="#FFFF99";
+ctx.moveTo(110,75);
+ctx.lineWidth="5";
+ctx.arc(75,75,35,0,Math.PI,false);
+ctx.moveTo(65,65);
+ctx.strokeStyle="#0000FF";
+		ctx.stroke();
+ctx.fill();
+  ctx.arc(60,65,4,0,Math.PI*2,true);
+ctx.moveTo(95,65);
+ctx.arc(90,65,4,0,Math.PI*2,true);
+ctx.stroke();}
+
+else{
+document.getElementById('no_cav').style.display=block;
+}
+} 
+draw();
+</script>
+</body>
+</html>
